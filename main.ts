@@ -46,8 +46,8 @@ if (ng.hardWasChosen()) {
 } else {
     delay = 500
 }
-let sequence: number[] = []
 basic.forever(function () {
+    let sequence: number[] = []
     presses = []
     sequence.push(Math.randomRange(0, 1))
     for (let value of sequence) {
@@ -58,7 +58,7 @@ basic.forever(function () {
     }
     for (let index = 0; index <= sequence.length; index++) {
         if (presses[index] != sequence[index]) {
-            game.gameOver()
+            ng.gameOver()
         }
     }
     basic.pause(2000)

@@ -1,14 +1,12 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <variables>
-    <variable type="" id="4UjCZU3X[[zYrT*whbLW">delay</variable>
-    <variable type="" id="PQxi=WKzqV/YZhU;89@M">presses</variable>
-    <variable type="" id="[cAG[`6%|YN9xc-g{x4^">sequence</variable>
-    <variable type="" id="8w}Z{BlL9dr`=b#H(e}S">value</variable>
-    <variable type="" id="+huv/r(6Qm5Jdj#MZa!]">index</variable>
-    <variable type="" id="lf?AGqwY9oNMVzbKG[S+">list</variable>
+    <variable type="" id="KD8jD]n(JYib/XZ!`5[@">presses</variable>
+    <variable type="" id="TF3DT|gRK3W}4n.v4Lv8">delay</variable>
+    <variable type="" id="nj3#pq__[C^Ij4DLJnG0">sequence</variable>
+    <variable type="" id="nJ.2rQf;[VZ`+tWu%*e,">value</variable>
+    <variable type="" id="QGa,3y(u-H6BC8h%*,V!">index</variable>
   </variables>
-  <block type="ng_gameHasStarted" disabled="true" x="0" y="0"></block>
-  <block type="pxt-on-start" x="0" y="2">
+  <block type="pxt-on-start" x="20" y="20">
     <statement name="HANDLER">
       <block type="ng_startWithIcon">
         <field name="icon">IconNames.Confused</field>
@@ -23,7 +21,7 @@
             </value>
             <statement name="DO0">
               <block type="variables_set">
-                <field name="VAR" id="4UjCZU3X[[zYrT*whbLW" variabletype="">delay</field>
+                <field name="VAR" id="TF3DT|gRK3W}4n.v4Lv8" variabletype="">delay</field>
                 <value name="VALUE">
                   <shadow type="math_number">
                     <field name="NUM">100</field>
@@ -33,7 +31,7 @@
             </statement>
             <statement name="ELSE">
               <block type="variables_set">
-                <field name="VAR" id="4UjCZU3X[[zYrT*whbLW" variabletype="">delay</field>
+                <field name="VAR" id="TF3DT|gRK3W}4n.v4Lv8" variabletype="">delay</field>
                 <value name="VALUE">
                   <shadow type="math_number">
                     <field name="NUM">500</field>
@@ -41,240 +39,18 @@
                 </value>
               </block>
             </statement>
-            <next>
-              <block type="variables_set">
-                <field name="VAR" id="[cAG[`6%|YN9xc-g{x4^" variabletype="">sequence</field>
-                <value name="VALUE">
-                  <block type="lists_create_with">
-                    <mutation items="0"></mutation>
-                  </block>
-                </value>
-              </block>
-            </next>
           </block>
         </next>
       </block>
     </statement>
   </block>
-  <block type="device_forever" x="575" y="0">
-    <statement name="HANDLER">
-      <block type="variables_set">
-        <field name="VAR" id="PQxi=WKzqV/YZhU;89@M" variabletype="">presses</field>
-        <value name="VALUE">
-          <shadow type="math_number">
-            <field name="NUM">0</field>
-          </shadow>
-          <block type="lists_create_with">
-            <mutation items="0"></mutation>
-          </block>
-        </value>
-        <next>
-          <block type="array_push">
-            <value name="list">
-              <block type="variables_get">
-                <field name="VAR" id="[cAG[`6%|YN9xc-g{x4^" variabletype="">sequence</field>
-              </block>
-            </value>
-            <value name="value">
-              <block type="device_random">
-                <value name="min">
-                  <shadow type="math_number">
-                    <field name="NUM">0</field>
-                  </shadow>
-                </value>
-                <value name="limit">
-                  <shadow type="math_number">
-                    <field name="NUM">1</field>
-                  </shadow>
-                </value>
-              </block>
-            </value>
-            <next>
-              <block type="pxt_controls_for_of">
-                <value name="VAR">
-                  <shadow type="variables_get_reporter">
-                    <field name="VAR" id="8w}Z{BlL9dr`=b#H(e}S" variabletype="">value</field>
-                  </shadow>
-                </value>
-                <value name="LIST">
-                  <block type="variables_get">
-                    <field name="VAR" id="[cAG[`6%|YN9xc-g{x4^" variabletype="">sequence</field>
-                  </block>
-                </value>
-                <statement name="DO">
-                  <block type="function_call">
-                    <mutation name="showValue" functionid="9jm,MG=YUt9(r0j.2/7o">
-                      <arg name="value" id="aq5gb6ab2ofwju3w8mpfe" type="number"></arg>
-                    </mutation>
-                    <field name="function_title">call</field>
-                    <field name="function_name">showValue</field>
-                    <value name="aq5gb6ab2ofwju3w8mpfe">
-                      <shadow type="math_number" id="V5drvf%WMO[)N~goUv+0">
-                        <field name="NUM">1</field>
-                      </shadow>
-                      <block type="variables_get">
-                        <field name="VAR" id="8w}Z{BlL9dr`=b#H(e}S" variabletype="">value</field>
-                      </block>
-                    </value>
-                  </block>
-                </statement>
-                <next>
-                  <block type="device_while">
-                    <value name="COND">
-                      <shadow type="logic_boolean">
-                        <field name="BOOL">TRUE</field>
-                      </shadow>
-                      <block type="logic_compare">
-                        <field name="OP">LT</field>
-                        <value name="A">
-                          <shadow type="math_number">
-                            <field name="NUM">0</field>
-                          </shadow>
-                          <block type="lists_length">
-                            <value name="VALUE">
-                              <block type="variables_get">
-                                <field name="VAR" id="PQxi=WKzqV/YZhU;89@M" variabletype="">presses</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <shadow type="math_number">
-                            <field name="NUM">0</field>
-                          </shadow>
-                          <block type="lists_length">
-                            <value name="VALUE">
-                              <block type="variables_get">
-                                <field name="VAR" id="[cAG[`6%|YN9xc-g{x4^" variabletype="">sequence</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <statement name="DO">
-                      <block type="device_pause">
-                        <value name="pause">
-                          <shadow type="timePicker">
-                            <field name="ms">100</field>
-                          </shadow>
-                        </value>
-                      </block>
-                    </statement>
-                    <next>
-                      <block type="pxt_controls_for">
-                        <value name="VAR">
-                          <shadow type="variables_get_reporter">
-                            <field name="VAR" id="+huv/r(6Qm5Jdj#MZa!]" variabletype="">index</field>
-                          </shadow>
-                        </value>
-                        <value name="TO">
-                          <shadow type="math_whole_number">
-                            <field name="NUM">0</field>
-                          </shadow>
-                          <block type="lists_length">
-                            <value name="VALUE">
-                              <block type="variables_get">
-                                <field name="VAR" id="[cAG[`6%|YN9xc-g{x4^" variabletype="">sequence</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <statement name="DO">
-                          <block type="controls_if">
-                            <value name="IF0">
-                              <shadow type="logic_boolean">
-                                <field name="BOOL">TRUE</field>
-                              </shadow>
-                              <block type="logic_compare">
-                                <field name="OP">NEQ</field>
-                                <value name="A">
-                                  <shadow type="math_number">
-                                    <field name="NUM">0</field>
-                                  </shadow>
-                                  <block type="lists_index_get">
-                                    <value name="LIST">
-                                      <block type="variables_get">
-                                        <field name="VAR" id="PQxi=WKzqV/YZhU;89@M" variabletype="">presses</field>
-                                      </block>
-                                    </value>
-                                    <value name="INDEX">
-                                      <shadow type="math_number">
-                                        <field name="NUM">0</field>
-                                      </shadow>
-                                      <block type="variables_get">
-                                        <field name="VAR" id="+huv/r(6Qm5Jdj#MZa!]" variabletype="">index</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <shadow type="math_number">
-                                    <field name="NUM">0</field>
-                                  </shadow>
-                                  <block type="lists_index_get">
-                                    <value name="LIST">
-                                      <block type="variables_get">
-                                        <field name="VAR" id="[cAG[`6%|YN9xc-g{x4^" variabletype="">sequence</field>
-                                      </block>
-                                    </value>
-                                    <value name="INDEX">
-                                      <shadow type="math_number">
-                                        <field name="NUM">0</field>
-                                      </shadow>
-                                      <block type="variables_get">
-                                        <field name="VAR" id="+huv/r(6Qm5Jdj#MZa!]" variabletype="">index</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <statement name="DO0">
-                              <block type="game_game_over"></block>
-                            </statement>
-                          </block>
-                        </statement>
-                        <next>
-                          <block type="device_pause">
-                            <value name="pause">
-                              <shadow type="timePicker">
-                                <field name="ms">2000</field>
-                              </shadow>
-                            </value>
-                            <next>
-                              <block type="ng_incrementScore">
-                                <next>
-                                  <block type="device_pause">
-                                    <value name="pause">
-                                      <shadow type="timePicker">
-                                        <field name="ms">500</field>
-                                      </shadow>
-                                    </value>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </statement>
-  </block>
-  <block type="function_definition" x="4" y="524">
-    <mutation name="registerPress" functionid="lW$Q3ed${#hrKYQv8WXZ">
-      <arg name="value" id="clra90tl8f1ew8trw1kx" type="number"></arg>
+  <block type="function_definition" x="368" y="36">
+    <mutation name="registerPress" functionid="?vna/;RUP^J8UaO_ZJZm">
+      <arg name="value" id="i2nmdd7cn5k43ptcm6fr" type="number"></arg>
     </mutation>
     <field name="function_title">function</field>
     <field name="function_name">registerPress</field>
-    <value name="clra90tl8f1ew8trw1kx">
+    <value name="i2nmdd7cn5k43ptcm6fr">
       <shadow type="argument_reporter_number">
         <field name="VALUE">value</field>
       </shadow>
@@ -282,7 +58,7 @@
     <statement name="STACK">
       <block type="controls_if">
         <value name="IF0">
-          <shadow type="logic_boolean" id="bxd)fsSGh1FrN]UGC6|c">
+          <shadow type="logic_boolean">
             <field name="BOOL">TRUE</field>
           </shadow>
           <block type="ng_hasStarted"></block>
@@ -291,7 +67,7 @@
           <block type="array_push">
             <value name="list">
               <block type="variables_get">
-                <field name="VAR" id="PQxi=WKzqV/YZhU;89@M" variabletype="">presses</field>
+                <field name="VAR" id="KD8jD]n(JYib/XZ!`5[@" variabletype="">presses</field>
               </block>
             </value>
             <value name="value">
@@ -301,13 +77,13 @@
             </value>
             <next>
               <block type="function_call">
-                <mutation name="showValue" functionid="9jm,MG=YUt9(r0j.2/7o">
-                  <arg name="value" id="aq5gb6ab2ofwju3w8mpfe" type="number"></arg>
+                <mutation name="showValue" functionid="=Drwi{ECh_rE)tIOG)1y">
+                  <arg name="value" id="30xozjtdwqkf6i5ddbtdc" type="number"></arg>
                 </mutation>
                 <field name="function_title">call</field>
                 <field name="function_name">showValue</field>
-                <value name="aq5gb6ab2ofwju3w8mpfe">
-                  <shadow type="math_number" id="|K86k_tS*)fdE;7FUcLB">
+                <value name="30xozjtdwqkf6i5ddbtdc">
+                  <shadow type="math_number" id="L_ey*D{E59H?o,1g_5-l">
                     <field name="NUM">1</field>
                   </shadow>
                   <block type="argument_reporter_number">
@@ -321,13 +97,13 @@
       </block>
     </statement>
   </block>
-  <block type="function_definition" x="7" y="890">
-    <mutation name="showValue" functionid="9jm,MG=YUt9(r0j.2/7o">
-      <arg name="value" id="aq5gb6ab2ofwju3w8mpfe" type="number"></arg>
+  <block type="function_definition" x="858" y="36">
+    <mutation name="showValue" functionid="=Drwi{ECh_rE)tIOG)1y">
+      <arg name="value" id="30xozjtdwqkf6i5ddbtdc" type="number"></arg>
     </mutation>
     <field name="function_title">function</field>
     <field name="function_name">showValue</field>
-    <value name="aq5gb6ab2ofwju3w8mpfe">
+    <value name="30xozjtdwqkf6i5ddbtdc">
       <shadow type="argument_reporter_number">
         <field name="VALUE">value</field>
       </shadow>
@@ -456,7 +232,7 @@
                             <value name="pause">
                               <shadow type="timePicker"></shadow>
                               <block type="variables_get">
-                                <field name="VAR" id="4UjCZU3X[[zYrT*whbLW" variabletype="">delay</field>
+                                <field name="VAR" id="TF3DT|gRK3W}4n.v4Lv8" variabletype="">delay</field>
                               </block>
                             </value>
                           </block>
@@ -472,16 +248,16 @@
       </block>
     </statement>
   </block>
-  <block type="device_button_event" x="574" y="929">
+  <block type="device_button_event" x="1313" y="20">
     <field name="NAME">Button.A</field>
     <statement name="HANDLER">
       <block type="function_call">
-        <mutation name="registerPress" functionid="lW$Q3ed${#hrKYQv8WXZ">
-          <arg name="value" id="clra90tl8f1ew8trw1kx" type="number"></arg>
+        <mutation name="registerPress" functionid="?vna/;RUP^J8UaO_ZJZm">
+          <arg name="value" id="i2nmdd7cn5k43ptcm6fr" type="number"></arg>
         </mutation>
         <field name="function_title">call</field>
         <field name="function_name">registerPress</field>
-        <value name="clra90tl8f1ew8trw1kx">
+        <value name="i2nmdd7cn5k43ptcm6fr">
           <shadow type="math_number">
             <field name="NUM">0</field>
           </shadow>
@@ -489,20 +265,232 @@
       </block>
     </statement>
   </block>
-  <block type="device_button_event" x="573" y="1113">
+  <block type="device_button_event" x="1609" y="20">
     <field name="NAME">Button.B</field>
     <statement name="HANDLER">
       <block type="function_call">
-        <mutation name="registerPress" functionid="lW$Q3ed${#hrKYQv8WXZ">
-          <arg name="value" id="clra90tl8f1ew8trw1kx" type="number"></arg>
+        <mutation name="registerPress" functionid="?vna/;RUP^J8UaO_ZJZm">
+          <arg name="value" id="i2nmdd7cn5k43ptcm6fr" type="number"></arg>
         </mutation>
         <field name="function_title">call</field>
         <field name="function_name">registerPress</field>
-        <value name="clra90tl8f1ew8trw1kx">
+        <value name="i2nmdd7cn5k43ptcm6fr">
           <shadow type="math_number">
             <field name="NUM">1</field>
           </shadow>
         </value>
+      </block>
+    </statement>
+  </block>
+  <block type="device_forever" x="1906" y="20">
+    <statement name="HANDLER">
+      <block type="variables_set">
+        <field name="VAR" id="KD8jD]n(JYib/XZ!`5[@" variabletype="">presses</field>
+        <value name="VALUE">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+          <block type="lists_create_with">
+            <mutation items="0"></mutation>
+          </block>
+        </value>
+        <next>
+          <block type="array_push">
+            <value name="list">
+              <block type="variables_get">
+                <field name="VAR" id="nj3#pq__[C^Ij4DLJnG0" variabletype="">sequence</field>
+              </block>
+            </value>
+            <value name="value">
+              <block type="device_random">
+                <value name="min">
+                  <shadow type="math_number">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+                <value name="limit">
+                  <shadow type="math_number">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="pxt_controls_for_of">
+                <value name="VAR">
+                  <shadow type="variables_get_reporter">
+                    <field name="VAR" id="nJ.2rQf;[VZ`+tWu%*e," variabletype="">value</field>
+                  </shadow>
+                </value>
+                <value name="LIST">
+                  <block type="variables_get">
+                    <field name="VAR" id="nj3#pq__[C^Ij4DLJnG0" variabletype="">sequence</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="function_call">
+                    <mutation name="showValue" functionid="=Drwi{ECh_rE)tIOG)1y">
+                      <arg name="value" id="30xozjtdwqkf6i5ddbtdc" type="number"></arg>
+                    </mutation>
+                    <field name="function_title">call</field>
+                    <field name="function_name">showValue</field>
+                    <value name="30xozjtdwqkf6i5ddbtdc">
+                      <shadow type="math_number" id="HB?wq8?Ot2J$glU]}(pJ">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="variables_get">
+                        <field name="VAR" id="nJ.2rQf;[VZ`+tWu%*e," variabletype="">value</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="device_while">
+                    <value name="COND">
+                      <shadow type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                      </shadow>
+                      <block type="logic_compare">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <shadow type="math_number">
+                            <field name="NUM">0</field>
+                          </shadow>
+                          <block type="lists_length">
+                            <value name="VALUE">
+                              <block type="variables_get">
+                                <field name="VAR" id="KD8jD]n(JYib/XZ!`5[@" variabletype="">presses</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number">
+                            <field name="NUM">0</field>
+                          </shadow>
+                          <block type="lists_length">
+                            <value name="VALUE">
+                              <block type="variables_get">
+                                <field name="VAR" id="nj3#pq__[C^Ij4DLJnG0" variabletype="">sequence</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="device_pause">
+                        <value name="pause">
+                          <shadow type="timePicker">
+                            <field name="ms">100</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="pxt_controls_for">
+                        <value name="VAR">
+                          <shadow type="variables_get_reporter">
+                            <field name="VAR" id="QGa,3y(u-H6BC8h%*,V!" variabletype="">index</field>
+                          </shadow>
+                        </value>
+                        <value name="TO">
+                          <shadow type="math_whole_number">
+                            <field name="NUM">0</field>
+                          </shadow>
+                          <block type="lists_length">
+                            <value name="VALUE">
+                              <block type="variables_get">
+                                <field name="VAR" id="nj3#pq__[C^Ij4DLJnG0" variabletype="">sequence</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="controls_if">
+                            <value name="IF0">
+                              <shadow type="logic_boolean">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                              <block type="logic_compare">
+                                <field name="OP">NEQ</field>
+                                <value name="A">
+                                  <shadow type="math_number">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                  <block type="lists_index_get">
+                                    <value name="LIST">
+                                      <block type="variables_get">
+                                        <field name="VAR" id="KD8jD]n(JYib/XZ!`5[@" variabletype="">presses</field>
+                                      </block>
+                                    </value>
+                                    <value name="INDEX">
+                                      <shadow type="math_number">
+                                        <field name="NUM">0</field>
+                                      </shadow>
+                                      <block type="variables_get">
+                                        <field name="VAR" id="QGa,3y(u-H6BC8h%*,V!" variabletype="">index</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                  <block type="lists_index_get">
+                                    <value name="LIST">
+                                      <block type="variables_get">
+                                        <field name="VAR" id="nj3#pq__[C^Ij4DLJnG0" variabletype="">sequence</field>
+                                      </block>
+                                    </value>
+                                    <value name="INDEX">
+                                      <shadow type="math_number">
+                                        <field name="NUM">0</field>
+                                      </shadow>
+                                      <block type="variables_get">
+                                        <field name="VAR" id="QGa,3y(u-H6BC8h%*,V!" variabletype="">index</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="ng_gameOver"></block>
+                            </statement>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="device_pause">
+                            <value name="pause">
+                              <shadow type="timePicker">
+                                <field name="ms">2000</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="ng_incrementScore">
+                                <next>
+                                  <block type="device_pause">
+                                    <value name="pause">
+                                      <shadow type="timePicker">
+                                        <field name="ms">500</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
       </block>
     </statement>
   </block>
