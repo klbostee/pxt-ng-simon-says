@@ -1,5 +1,18 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-<variables></variables>
-<block type="forever" x="0" y="0"></block>
-<block type="pxt-on-start" x="180" y="0"></block>
+  <variables></variables>
+  <block type="forever" disabled="true" x="0" y="0"></block>
+  <block type="pxt-on-start" x="10" y="10">
+    <statement name="HANDLER">
+      <block type="device_show_leds">
+        <field name="LEDS">`
+        . . . . . 
+        . # . # . 
+        . . . . . 
+        # . . . # 
+        . # # # .
+        `
+        </field>
+      </block>
+    </statement>
+  </block>
 </xml>
