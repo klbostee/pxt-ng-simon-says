@@ -1,5 +1,5 @@
 function registerPress (value: number) {
-    if (ng.gameHasStarted()) {
+    if (ng.hasStarted()) {
         presses.push(value)
         showValue(value)
     }
@@ -40,7 +40,7 @@ input.onButtonPressed(Button.B, function () {
 })
 let presses: number[] = []
 let delay = 0
-ng.startWithIcon(IconNames.EigthNote)
+ng.startWithIcon(IconNames.Confused)
 if (ng.hardWasChosen()) {
     delay = 100
 } else {

@@ -7,10 +7,11 @@
     <variable type="" id="+huv/r(6Qm5Jdj#MZa!]">index</variable>
     <variable type="" id="lf?AGqwY9oNMVzbKG[S+">list</variable>
   </variables>
-  <block type="pxt-on-start" x="3" y="14">
+  <block type="ng_gameHasStarted" disabled="true" x="0" y="0"></block>
+  <block type="pxt-on-start" x="0" y="2">
     <statement name="HANDLER">
       <block type="ng_startWithIcon">
-        <field name="icon">IconNames.EigthNote</field>
+        <field name="icon">IconNames.Confused</field>
         <next>
           <block type="controls_if">
             <mutation else="1"></mutation>
@@ -55,7 +56,7 @@
       </block>
     </statement>
   </block>
-  <block type="device_forever" x="578" y="12">
+  <block type="device_forever" x="575" y="0">
     <statement name="HANDLER">
       <block type="variables_set">
         <field name="VAR" id="PQxi=WKzqV/YZhU;89@M" variabletype="">presses</field>
@@ -108,7 +109,7 @@
                     <field name="function_title">call</field>
                     <field name="function_name">showValue</field>
                     <value name="aq5gb6ab2ofwju3w8mpfe">
-                      <shadow type="math_number" id="5:hN#fq-V^.2Z7[j}1Br">
+                      <shadow type="math_number" id="V5drvf%WMO[)N~goUv+0">
                         <field name="NUM">1</field>
                       </shadow>
                       <block type="variables_get">
@@ -267,7 +268,7 @@
       </block>
     </statement>
   </block>
-  <block type="function_definition" x="4" y="519">
+  <block type="function_definition" x="4" y="524">
     <mutation name="registerPress" functionid="lW$Q3ed${#hrKYQv8WXZ">
       <arg name="value" id="clra90tl8f1ew8trw1kx" type="number"></arg>
     </mutation>
@@ -284,7 +285,7 @@
           <shadow type="logic_boolean" id="bxd)fsSGh1FrN]UGC6|c">
             <field name="BOOL">TRUE</field>
           </shadow>
-          <block type="ng_gameHasStarted"></block>
+          <block type="ng_hasStarted"></block>
         </value>
         <statement name="DO0">
           <block type="array_push">
@@ -306,7 +307,7 @@
                 <field name="function_title">call</field>
                 <field name="function_name">showValue</field>
                 <value name="aq5gb6ab2ofwju3w8mpfe">
-                  <shadow type="math_number" id="M$FqWIPQK[pVj~u3D0sr">
+                  <shadow type="math_number" id="|K86k_tS*)fdE;7FUcLB">
                     <field name="NUM">1</field>
                   </shadow>
                   <block type="argument_reporter_number">
@@ -320,7 +321,7 @@
       </block>
     </statement>
   </block>
-  <block type="function_definition" x="10" y="902">
+  <block type="function_definition" x="7" y="890">
     <mutation name="showValue" functionid="9jm,MG=YUt9(r0j.2/7o">
       <arg name="value" id="aq5gb6ab2ofwju3w8mpfe" type="number"></arg>
     </mutation>
@@ -471,7 +472,7 @@
       </block>
     </statement>
   </block>
-  <block type="device_button_event" x="577" y="941">
+  <block type="device_button_event" x="574" y="929">
     <field name="NAME">Button.A</field>
     <statement name="HANDLER">
       <block type="function_call">
@@ -488,7 +489,7 @@
       </block>
     </statement>
   </block>
-  <block type="device_button_event" x="576" y="1125">
+  <block type="device_button_event" x="573" y="1113">
     <field name="NAME">Button.B</field>
     <statement name="HANDLER">
       <block type="function_call">
