@@ -1,10 +1,10 @@
-function registerPress (value: number) {
+function registerPress(value: number) {
     if (ng.hasStarted()) {
         presses.push(value)
         showValue(value)
     }
 }
-function showValue (value: number) {
+function showValue(value: number) {
     if (value == 0) {
         basic.showLeds(`
             . # # # .
