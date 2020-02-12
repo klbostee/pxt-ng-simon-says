@@ -1,4 +1,4 @@
-# pxt-ng-simon-says
+# pxt-ng-simonsays
 
 ## Supported targets
 
