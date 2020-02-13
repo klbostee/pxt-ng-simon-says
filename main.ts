@@ -1,10 +1,10 @@
-function registerPress(value: number) {
+function registerPress (value: number) {
     if (ng.hasStarted()) {
         presses.push(value)
         showValue(value)
     }
 }
-function showValue(value: number) {
+function showValue (value: number) {
     if (value == 0) {
         basic.showLeds(`
             . # # # .
@@ -32,10 +32,10 @@ function showValue(value: number) {
     ng.neopixels().show()
     basic.pause(delay)
 }
-input.onButtonPressed(Button.A, function () {
+ng.onButtonPressed(ng.NGButton.A, function () {
     registerPress(0)
 })
-input.onButtonPressed(Button.B, function () {
+ng.onButtonPressed(ng.NGButton.B, function () {
     registerPress(1)
 })
 let presses: number[] = []
@@ -46,8 +46,8 @@ if (ng.hardWasChosen()) {
 } else {
     delay = 500
 }
+let sequence: number[] = []
 basic.forever(function () {
-    let sequence: number[] = []
     presses = []
     sequence.push(Math.randomRange(0, 1))
     for (let value of sequence) {
